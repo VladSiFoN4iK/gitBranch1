@@ -27,6 +27,7 @@ int main() {
 
 
 vector<string> readLines(const string& path) {
+    
     std::ifstream in(path);
     vector<string> lines;
 
