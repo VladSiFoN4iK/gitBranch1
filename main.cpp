@@ -42,8 +42,16 @@ vector<string> readLines(const string& path) {
     return lines;
 }
 
-void printLines(const vector<string>& /*lines*/) {
+void printLines(const vector<string>& lines) {
+    for (const auto& s : lines) {
+        std::cout << s << '\n';
+    }
 }
 
-void writeLines(const vector<string>& /*lines*/, const string& /*path*/) {
+
+void writeLines(const vector<string>& lines, const string& path) {
+    std::ofstream out(path);
+    for (const auto& s : lines) {
+        out << s << '\n';
+    }
 }
